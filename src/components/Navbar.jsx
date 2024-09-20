@@ -14,6 +14,8 @@ function Navbar() {
   const [helpHovered, setHelpHovered] = useState(false);
   const [postHovered, setPostHovered] = useState(false);
   const [messageHover, setMessageHover] = useState(false);
+  const [appsHover, setAppsHover] = useState(false);
+  const [englishHover, setEnglishsHover] = useState(false);
   const [isType, setIsType] = useState("Product");
   const [scrolled, setScrolled] = useState(false);
   const sortedCategories = category.sort((a, b) => a.cat.localeCompare(b.cat));
@@ -199,61 +201,36 @@ function Navbar() {
               <div
                 onMouseEnter={() => setSupplierHoverd(true)}
                 onMouseLeave={() => setSupplierHoverd(false)}
-                className="absolute p-3 z-10 w-1/5 min-h-[300px] space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[40px] right-16 transition"
-              >
-              
-              </div>
+                className="absolute p-3 z-10 w-1/5 min-h-[300px] space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[125px] right-[280px] transition"
+              ></div>
+            )}
+            {appsHover && (
+              <div
+                onMouseEnter={() => setAppsHover(true)}
+                onMouseLeave={() => setAppsHover(false)}
+                className="absolute p-3 z-10 w-1/5 min-h-[300px] space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[125px] right-[80px] transition"
+              ></div>
+            )}
+            {englishHover && (
+              <div
+                onMouseEnter={() => setEnglishsHover(true)}
+                onMouseLeave={() => setEnglishsHover(false)}
+                className="absolute p-3 z-10 w-1/5 min-h-[300px] space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[125px] right-[40px] transition"
+              ></div>
             )}
             {helpHovered && (
               <div
                 onMouseEnter={() => setHelpHovered(true)}
                 onMouseLeave={() => setHelpHovered(false)}
-                className="absolute p-3 z-10 w-1/5 space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[65px] right-16 transition"
-              >
-                <p className="text-sm text-gray-400">
-                  Sign in to view the new messages
-                </p>
-                <button className="bg-red-600 p-1 text-white w-full rounded-xl">
-                  <a href="/login">Sign In</a>
-                </button>
-                <button className="bg-white p-1 text-red-400 border-red-600 border mt-4 w-full rounded-xl">
-                  <a href="/register">Join Free</a>
-                </button>
-              </div>
+                className="absolute p-3 z-10 w-1/5 min-h-[200px] space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[120px] right-16 transition"
+              ></div>
             )}
             {buyerHover && (
               <div
                 onMouseEnter={() => setBuyerHovered(true)}
                 onMouseLeave={() => setBuyerHovered(false)}
-                className="absolute p-3 z-10 w-1/5 space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[65px] right-16 transition"
-              >
-                <p className="text-sm text-gray-400">
-                  Sign in to view the new messages
-                </p>
-                <button className="bg-red-600 p-1 text-white w-full rounded-xl">
-                  <a href="/login">Sign In</a>
-                </button>
-                <button className="bg-white p-1 text-red-400 border-red-600 border mt-4 w-full rounded-xl">
-                  <a href="/register">Join Free</a>
-                </button>
-              </div>
-            )}
-            {supplierHover && (
-              <div
-                onMouseEnter={() => setMessageHover(true)}
-                onMouseLeave={() => setMessageHover(false)}
-                className="absolute p-3 z-10 w-1/5 space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[65px] right-16 transition"
-              >
-                <p className="text-sm text-gray-400">
-                  Sign in to view the new messages
-                </p>
-                <button className="bg-red-600 p-1 text-white w-full rounded-xl">
-                  <a href="/login">Sign In</a>
-                </button>
-                <button className="bg-white p-1 text-red-400 border-red-600 border mt-4 w-full rounded-xl">
-                  <a href="/register">Join Free</a>
-                </button>
-              </div>
+                className="absolute p-3 z-10 w-1/3 min-h-[300px] space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[120px] right-16 transition"
+              ></div>
             )}
             {postHovered && (
               <div
@@ -286,7 +263,7 @@ function Navbar() {
                     onMouseEnter={() => setCategoryOpen(true)}
                     onMouseLeave={() => setCategoryOpen(false)}
                     // onClick={() => setCategoryOpen(!categoryOpen)}
-                    className="hidden md:inline-flex justify-center w-full rounded-md  mt-2 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 focus:outline-none"
+                    className="hidden md:inline-flex justify-center w-full rounded-md  mt-2  px-4 py-2 bg-white text-sm font-medium text-gray-700 focus:outline-none"
                     id="menu-button"
                     aria-expanded="true"
                     aria-haspopup="true"
@@ -357,16 +334,32 @@ function Navbar() {
                       Suppliers
                     </p>
                   </div>
-                  <div>
+                  <div
+                    onMouseEnter={() => setBuyerHovered(true)}
+                    onMouseLeave={() => setBuyerHovered(false)}
+                  >
                     <p className="hover:text-red-400 cursor-pointer">Buyers</p>
                   </div>
                 </div>
                 <div className="gap-8  inline-flex">
-                  <div>
+                  <div
+                    onMouseEnter={() => setHelpHovered(true)}
+                    onMouseLeave={() => setHelpHovered(false)}
+                  >
                     <p className="hover:text-red-400 cursor-pointer">Help</p>
                   </div>
-                  <p className="hover:text-red-400 cursor-pointer">Apps</p>
-                  <p className="hover:text-red-400 cursor-pointer">English</p>
+                  <div
+                    onMouseEnter={() => setAppsHover(true)}
+                    onMouseLeave={() => setAppsHover(false)}
+                  >
+                    <p className="hover:text-red-400 cursor-pointer">Apps</p>
+                  </div>
+                  <div
+                    onMouseEnter={() => setEnglishsHover(true)}
+                    onMouseLeave={() => setEnglishsHover(false)}
+                  >
+                    <p className="hover:text-red-400 cursor-pointer">English</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -376,7 +369,7 @@ function Navbar() {
         <div className=" flex justify-between items-center bg-white z-50 px-6 p-4 sticky top-0 ">
           <FiAlignJustify size={32} className="lg:hidden " />
           <div className="hidden lg:block">Logo</div>
-          <div className="hidden lg:block border-red-500 rounded-2xl w-[900px] border">
+          <div className="hidden lg:block relative border-red-500 rounded-2xl w-[900px] border-2">
             <div className="hidden md:relative md:inline-block text-left">
               <div className="">
                 <div
@@ -428,6 +421,13 @@ function Navbar() {
               className="  lg:w-[500px] p-2"
               type="text"
             />
+            <IoCameraOutline
+              className=" absolute right-[15%] top-2"
+              size={32}
+            />
+            <div className="bg-red-500 w-[100px] p-1.5 absolute right-0 top-0 rounded-r-xl flex flex-col items-center justify-center">
+              <IoSearchOutline size={32} className="text-white" />
+            </div>
           </div>
           <div className="hidden lg:block">
             <p>Page</p>

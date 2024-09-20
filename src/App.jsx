@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import HomeLayout from "./layouts/HomeLayout";
 import GetstartedLayout from "./layouts/GetstartedLayout";
 import Dashboard from "./pages/Dashboard";
+import DashboardLayout from "./layouts/DashboardLayout";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/login" element={<Login />} />
         </Route>
-        <Route>
+        <Route element={<DashboardLayout/>}>
           <Route path="/dashboard" element={<Dashboard/>}/>
         </Route>
       </Routes>
