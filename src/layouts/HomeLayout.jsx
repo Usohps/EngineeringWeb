@@ -5,8 +5,23 @@ import Footer from "../components/Footer"
 
 function HomeLayout() {
   return (
-    <div>
+    <div className="relative">
           <Navbar/>
+          <div>
+          <div className="lg:hidden w-full flex overflow-x-auto space-x-6 scrollbar-hide">
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+            <div><p>giving</p></div>
+          </div>
+          </div>
           <Outlet/>
           <Footer/>
     </div>

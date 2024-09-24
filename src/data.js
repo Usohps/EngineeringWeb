@@ -138,7 +138,8 @@ export const category= [
         subcat:[{
         head:"Agriculture cleaning",
         details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
-        }]
+        },
+      ]
       }
     ,
     {
@@ -198,7 +199,44 @@ export const category= [
         subcat:[{
         head:"Agriculture Machinery",
         details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
-        }]
+        },
+        {
+          head:"Agriculture Machinery",
+          details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
+          },
+          {
+            head:"Agriculture Machinery",
+            details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
+            },
+            {
+              head:"Agriculture Machinery",
+              details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
+              },
+              {
+                head:"Agriculture Machinery",
+                details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
+                },
+                {
+                  head:"Agriculture Machinery",
+                  details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
+                  },
+                  {
+                    head:"Agriculture Machinery",
+                    details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
+                    },
+                  {
+                    head:"Agriculture Machinery",
+                    details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
+                    },
+                    {
+                      head:"Agriculture Machinery",
+                      details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
+                      },
+                      {
+                        head:"Agriculture Machinery",
+                        details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
+                        },
+      ]
       }
     ,
     {
@@ -256,7 +294,7 @@ export const category= [
       head:"Agriculture Machinery",
       details:["Agricultural Machinery","Feed Processing Machinery","Livestock Machinery","Tiller","Havesting Machine"],
       }]
-    }
+    },
 
     // Add more categories here
   ]

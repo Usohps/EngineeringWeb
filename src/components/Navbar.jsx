@@ -45,7 +45,7 @@ function Navbar() {
   return (
     <>
       {!scrolled ? (
-        <div className="relative bg-white cursor-pointer">
+        <div className="relative bg-white cursor-pointer transition ease-in-out">
           <div className="flex justify-between items-center z-50  p-4 top-0 ">
             <FiAlignJustify className="lg:hidden" size={24} />
             <div>
@@ -366,7 +366,7 @@ function Navbar() {
           </div>
         </div>
       ) : (
-        <div className=" flex justify-between items-center bg-white z-50 px-6 p-4 sticky top-0 ">
+        <div className=" flex justify-between items-center bg-white transition ease-in-out z-50 px-6 p-4 sticky top-0 ">
           <FiAlignJustify size={32} className="lg:hidden " />
           <div className="hidden lg:block">Logo</div>
           <div className="hidden lg:block relative border-red-500 rounded-2xl w-[900px] border-2">
